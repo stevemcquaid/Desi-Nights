@@ -1,0 +1,9 @@
+### REWRITES AND REDIRECTS
+# REQUEST METHODS: GET,POST,PUT,DELETE,CONNECT,OPTIONS,PATCH,PROPFIND,
+#                  PROPPATCH,MKCOL,COPY,MOVE,LOCK,UNLOCK
+ 
+## REWRITE DEFAULTS
+RewriteEngine On
+RewriteBase /
+RewriteCond $1 !^(index\.php|dist\/*|github\.php)
+RewriteRule ^(.*)$ index.php?p=$1 [L,QSA]
